@@ -73,6 +73,5 @@ They want a schedule that they can commit to. The user will want to be challenge
 The user wants something to challenge them, using this weekly routine and having the user list their favorite activities will defiantly keep them motivated and excited.
 
 My friend Erika loves to exercise all the time, but sometimes she feels unmotivated because she keeps doing the same routine from week to week. 
-
 She gets bored and then decides not to do anything. 
 This app is going to change her exercise routine for good. 
