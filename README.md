@@ -27,7 +27,7 @@ I want to be proficient in PHP, JavaScript, jQuery and SQL. I hope this project 
 ## Similar applications and reflections on the differences with my app:
 
 I was not able to find an application that had the same idea as mine.
-I�m a FIRST!!!
+I am the FIRST!!!
 
 ###The applications that I searched and compared were the followings:
 
