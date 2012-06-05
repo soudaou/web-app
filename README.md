@@ -48,13 +48,9 @@ My app will let the user keep track of what they did at the end of each day.
 
 #### -	BodyRock.tv
 
-This is a great app it has all videos of different workout done almost every day. 
+This is a great app it has all videos of different workout done almost every day. The host will explain the rules before and after she will tell you how amazing this workout was. 
 
-The host will explain the rules before and after she will tell you how amazing this workout was. 
-
-You can choose the videos you like as your favorites and watch them whenever you want.
-
-You can chitchat with other members that follow this app as well.
+You can choose the videos you like as your favorites and watch them whenever you want. You can chitchat with other members that follow this app as well.
 
 #####Differences: 
 My app will let the user decide what exercises/activities they want to do each week. They are in control.
