@@ -30,7 +30,7 @@ I am the FIRST!!!
 #### -	miCoach (for adidas)
 
 The miCoach is an application that gives the user different workouts with different levels, were you can track 
-how you are doing It also has a GPS so you can know where you are if you are running for instance. 
+how you are doing. It also has a GPS so you can know where you are if you are running for instance. 
 
 #####Differences: 
 My app will let the user choose the exercises/activities they want. This way they will be doing what they want.
