@@ -31,7 +31,7 @@ I am the FIRST!!!
 
 ###The applications that I searched and compared were the followings:
 
-#### -miCoach (for adidas)
+#### -	miCoach (for adidas)
 
 The miCoach is an application that gives the user different workouts with different levels, were you can track 
 how you are doing It also has a GPS so you can know where you are if you are running for instance. 
@@ -40,7 +40,7 @@ how you are doing It also has a GPS so you can know where you are if you are run
 
 This way they will be doing what they want.
 
-#### -NTC (for Nike)
+#### -	NTC (for Nike)
 
 The NTC app is similar to the miCoach in many ways. It gives you the workouts and you can save 
 
@@ -50,7 +50,7 @@ This keeps you motivated and proud of what you did.
 
 #####Differences: My app will let the user keep track of what they did at the end of each day.
 
-#### -BodyRock.tv
+#### -	BodyRock.tv
 
 This is a great app it has all videos of different workout done almost every day. 
 
