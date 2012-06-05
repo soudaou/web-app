@@ -33,9 +33,7 @@ The miCoach is an application that gives the user different workouts with differ
 how you are doing It also has a GPS so you can know where you are if you are running for instance. 
 
 #####Differences: 
-My app will let the user choose the exercises/activities they want. 
-
-This way they will be doing what they want.
+My app will let the user choose the exercises/activities they want. This way they will be doing what they want.
 
 #### -	NTC (for Nike)
 
@@ -59,9 +57,7 @@ You can choose the videos you like as your favorites and watch them whenever you
 You can chitchat with other members that follow this app as well.
 
 #####Differences: 
-My app will let the user decide what exercises/activities they want to do each week. 
-
-They are in control.
+My app will let the user decide what exercises/activities they want to do each week. They are in control.
 
 ##My ideal user is:
 
