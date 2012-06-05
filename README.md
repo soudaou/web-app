@@ -32,7 +32,8 @@ I am the FIRST!!!
 The miCoach is an application that gives the user different workouts with different levels, were you can track 
 how you are doing It also has a GPS so you can know where you are if you are running for instance. 
 
-#####Differences: My app will let the user choose the exercises/activities they want. 
+#####Differences: 
+My app will let the user choose the exercises/activities they want. 
 
 This way they will be doing what they want.
 
@@ -44,7 +45,8 @@ them and you can keep progress of how you did. For every workout you do and you 
 
 This keeps you motivated and proud of what you did.
 
-#####Differences: My app will let the user keep track of what they did at the end of each day.
+#####Differences: 
+My app will let the user keep track of what they did at the end of each day.
 
 #### -	BodyRock.tv
 
@@ -56,7 +58,8 @@ You can choose the videos you like as your favorites and watch them whenever you
 
 You can chitchat with other members that follow this app as well.
 
-#####Differences: My app will let the user decide what exercises/activities they want to do each week. 
+#####Differences: 
+My app will let the user decide what exercises/activities they want to do each week. 
 
 They are in control.
 
