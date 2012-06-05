@@ -20,9 +20,9 @@ I want to be proficient in PHP, JavaScript, jQuery and SQL. I hope this project 
 
 ##Technologies or techniques I’ll be exploring:
 
-- •	Responsive web design.
+- 	Responsive web design.
 
-- •	Google Maps integration.
+- 	Google Maps integration.
 
 ## Similar applications and reflections on the differences with my app:
 
