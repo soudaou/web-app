@@ -6,13 +6,9 @@ It will spice up your routine every week and you will never be bored again.
 
 ##Application Features:
 
--	Create a list that has all the different kinds of sports and activities you enjoy 
+-	Create a list that has all the different kinds of sports and activities you enjoy and the application will generate a random schedule for you each week.
 
-	and the application will generate a random schedule for you each week.
-
--	The application will also have a map with directions that will locate gyms 
-
-	and parks near you depending on what the activity is for a specific day.
+-	The application will also have a map with directions that will locate gyms and parks near you depending on what the activity is for a specific day.
 
 ##My learning goals:
 
