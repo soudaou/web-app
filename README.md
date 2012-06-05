@@ -18,7 +18,7 @@ It will spice up your routine every week and you will never be bored again.
 
 I want to be proficient in PHP, JavaScript, jQuery and SQL. I hope this project will teach me a lot and make me a better developer.
 
-##Technologies or techniques I’ll be exploring:
+##Technologies or techniques Iï¿½ll be exploring:
 
 - 	Responsive web design.
 
@@ -27,7 +27,7 @@ I want to be proficient in PHP, JavaScript, jQuery and SQL. I hope this project 
 ## Similar applications and reflections on the differences with my app:
 
 I was not able to find an application that had the same idea as mine.
-I’m a FIRST!!!
+Iï¿½m a FIRST!!!
 
 ###The applications that I searched and compared were the followings:
 
