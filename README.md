@@ -12,7 +12,7 @@ It will spice up your routine every week and you will never be bored again.
 
 ##My learning goals:
 
-I want to be proficient in PHP, JavaScript, jQuery and SQL. I hope this project will teach me a lot and make me a better developer.
+I want to be proficient in PHP, JavaScript, jQuery, AJAX and MySQL. I hope this project will teach me a lot and make me a better developer.
 
 ##Technologies or techniques I will be exploring:
 
