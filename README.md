@@ -66,3 +66,7 @@ The user wants something to challenge them, using this weekly routine and having
 My friend Erika loves to exercise all the time, but sometimes she feels unmotivated because she keeps doing the same routine from week to week. 
 She gets bored and then decides not to do anything. 
 This app is going to change her exercise routine for good. 
+
+##Interactive wireframe:
+
+[my xercise planner](http://invis.io/B6430M83).  
