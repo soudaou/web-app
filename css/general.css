@@ -1,0 +1,98 @@
+@charset "utf-8";
+/* CSS Document */
+
+html{
+	margin:0 auto;
+	padding:0;
+	font: normal 100%/1.5 "Century Gothic";
+	background-color:#333;
+}
+body{
+	margin: 0;
+	padding: 0;
+/*	width:50%;*/
+	background-color:#999;
+	
+}
+header{
+	background: url(../images/logo.png) no-repeat center top;
+	padding-top:12em
+}
+h1{
+	text-align: center;
+}
+nav{
+	
+	text-align: center;
+}
+nav ul{
+	margin: 0;
+	padding: 0;	
+	list-style-type: none;
+}	
+nav li,
+nav li:first-child{
+	width:266px;
+	color:#FFF;
+	background-color:#666;
+	display: inline;
+	border: 0;
+}
+	
+nav a,
+nav a:link,
+nav a:visited{
+	display: inline-block;
+	padding: 0.5em 0.75em;
+	color: #fff;
+	font-size: 1.25em;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+nav a:hover,
+nav a:focus,
+nav a:active{
+	color:#09F;
+}
+
+/*nav li{
+	color:#FFF;
+	background-color:#666;
+}
+
+nav a,
+nav a:link,
+nav a:visited{
+	display: block;
+	padding: 0.5em 0.75em;
+	color: #fff;
+	font-size: 1.25em;
+	text-decoration: none;
+	text-transform: uppercase;
+	background-color:#333;
+	color: #fff;
+}*/
+header,
+footer,
+nav,
+aside,
+article,
+section,
+figure,
+figcaption{
+	display: block;
+}
+img{
+	background-size:100%;
+}
+.slogan{
+	text-align:center;
+	font-size:2em;
+	color:#FFFFFF;
+	border-radius: 4px 4px 4px 4px;
+}
+.sign-up{
+	text-align:center;
+}
