@@ -1,4 +1,4 @@
-# Progress Reports
+# Progress Reports:
 
 1. I was able in the past week to get the tables all ready to go for the app.
 
