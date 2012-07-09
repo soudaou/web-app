@@ -23,12 +23,14 @@ $results = $sql->fetchALL();
 
 <body>
 	<header>
-		<h1><a href="index.html"><img src="images/logo1.png" alt="Just Design logo"></a></h1>
+		<div class="logo">
+			<a href="main-pg.php"><img src="images/logo1.png" alt="Just Design logo"></a>
+		</div>
 		<nav>
 			<ul>
 				<li><a href="create-list.html">Create my List</a></li>
-				<li><a href="#">My List</a></li>
-				<li><a href="#">Edit List</a></li>
+				<li><a href="my-list.php">My List</a></li>
+				<li><a href="edit-list.php">Edit List</a></li>
 			</ul>
 		</nav>
 	</header>
