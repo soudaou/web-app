@@ -41,23 +41,22 @@ $results = $sql->fetchALL();
 	
 		<h1> <strong> This application is for exercise fanatics </strong> </h1>
 		<div class="content">
-			<div class="container">
-				<form method="post" action="index.php">
-					 <div>
-					 <h1>Sign in:</h1>
-						<label for="email">
-							<strong> Email </strong>
-							<?php if (isset($errors['email'])): ?> 
-							<strong class="error">is required</strong> 
-							<?php endif; ?>
-						</label>
-						<input id="email" name="email" required value="<?php echo $email; ?>">
-					</div>
-			
-					<button types="submit">Sign In</button>
-				</form>
-				<a href="sign-up.php"><img src="images/sign-up.png" alt=""></a>
-			</div>
+			<fieldset>
+            <legend>
+            	<strong>Choose 7 Exercise: </strong>
+                <?php if (isset($errors['preferredlang'])): ?> 
+            	<strong class="error">Must choose 7!</strong> 
+				<?php endif; ?>
+            </legend>
+            <input type="radio" id="english" name="preferredlang" value="english">
+            <label for="english">English</label>
+                
+            <input type="radio" id="french" name="preferredlang" value="french">
+            <label for="french">French</label>
+                
+            <input type="radio" id="spanish" name="preferredlang" value="spanish">
+            <label for="spanish">Spanish</label>
+        </fieldset>
 		</div>
 		
 	</div>
