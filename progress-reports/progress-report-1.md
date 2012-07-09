@@ -1,5 +1,6 @@
 # Progress Reports:
 
+
 1. I was able in the past week to get the tables all ready to go for the app.
 
 2. No I didnt. I did want to get the user to be able to sign up and then login in.
