@@ -9,7 +9,7 @@
 
 	A- No I didnt. I did want to get the user to be able to sign up and then login in.
 
-#### 3. ####Q- What are your goals for this week?
+#### 3. Q- What are your goals for this week?
 
 	A- I really want to get the sign up page and login pages done this week.I want toIf I do accomplish this half way,
 	I want to try to create the creat my list page.
