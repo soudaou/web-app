@@ -1,7 +1,6 @@
 <?php
 
 require_once 'includes/db.php';
-require_once 'includes/form-processor.php';
 
 $sql = $db->query('
 	SELECT id, email
@@ -24,8 +23,8 @@ $results = $sql->fetchALL();
 
 <body>
 	<header>
-<!--		<h1><a href="index.html"><img src="images/logo.png" alt="Just Design logo"></a></h1>
--->		<nav>
+		<h1><a href="index.html"><img src="images/logo1.png" alt="Just Design logo"></a></h1>
+		<nav>
 			<ul>
 				<li><a href="create-list.html">Create my List</a></li>
 				<li><a href="#">My List</a></li>
