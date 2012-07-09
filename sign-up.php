@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<link href="css/general.css" rel="stylesheet">
 </head>
 	<header>
-		<h1><a href="index.html"><img src="images/logo1.png" alt="Just Design logo"></a></h1>
+		<h1><a href="index.php"><img src="images/logo1.png" alt="Just Design logo"></a></h1>
 		<nav>
 			<ul>
 				<li><a href="create-list.html"> <strong> Create my List </strong> </a></li>
@@ -47,21 +47,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <body>
 	
-	<div class="container">
-		<h1>Sign up:</h1>
-		<form method="post" action="sign-up.php">
-			 <div>
-				<label for="email">
-					<strong> Email </strong>
-					<?php if (isset($errors['email'])): ?> 
-					<strong class="error">is required</strong> 
-					<?php endif; ?>
-				</label>
-				<input id="email" name="email" required value="<?php echo $email; ?>">
-			</div>
-	
-			<button types="submit">Sign Up</button>
-		</form>
+	<div class="content">
+		<div class="container">
+			<h1>Sign up:</h1>
+			<form method="post" action="sign-up.php">
+				 <div>
+					<label for="email">
+						<strong> Email </strong>
+						<?php if (isset($errors['email'])): ?> 
+						<strong class="error">is required</strong> 
+						<?php endif; ?>
+					</label>
+					<input id="email" name="email" required value="<?php echo $email; ?>">
+				</div>
+		
+				<button types="submit">Sign Up</button>
+			</form>
+		</div>
 	</div>
 	
 </body>
