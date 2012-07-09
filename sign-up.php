@@ -4,7 +4,7 @@ require_once 'includes/form-processor.php';
 
 $errors = array();
 
-$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_NUMBER_INT);
+$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -17,13 +17,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		require_once 'includes/db.php';
 		
 		$sql = $db->prepare('
-			INSERT INTO mep-users (email)
+			INSERT INTO mep_users (email)
 			VALUES (:email)
 		');
-		$sql->bindValue(':email', $email, PDO::PARAM_INT);
+		$sql->bindValue(':email', $email, PDO::PARAM_STR);
 		$sql->execute();
-		
-		header('Location: sign-in.php');
+		//var_dump($sql->errorInfo());
+		header('Location: main-pg.php');
 		exit;
 	}
 }
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	<h1>Sign up:</h1>
     
-	<form method="post" action="index.php">
+	<form method="post" action="sign-up.php">
          <div>
             <label for="email">
             	<strong> Email </strong>
