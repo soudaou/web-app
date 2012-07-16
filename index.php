@@ -1,5 +1,10 @@
 <?php
 require_once 'includes/db.php';
+session_start();
+
+//session_destroy();
+//header("location:/index.php");
+//exit();
 
 $errors = array();
 
@@ -52,16 +57,14 @@ if ($_SERVER['REQUEST_METHOD'] =='POST') {
 <body>
 	<div id="body-wrapper">
 		<header>
-			<div class="logo">
-				<a href="index.php"><img src="images/logo1.png" alt="Just Design logo"></a>
-			</div>
-			<nav>
+			<h1><a href="index.php"><img src="images/logo1.png" alt="Just Design logo"></a></h1>
+		<!--	<nav>
 				<ul>
-					<li><a href="create-list.php"> <strong> Create my List </strong> </a></li>
-					<li><a href="my-list.php"><strong> My List </strong></a></li>
-					<li><a href="edit-list.php"><strong> Edit List </strong></a></li>
+					<li><a href="create-list.html"> <strong> Create my List </strong> </a></li>
+					<li><a href="#"><strong> My List </strong></a></li>
+					<li><a href="#"><strong> Edit List </strong></a></li>
 				</ul>
-			</nav>
+			</nav>-->
 		</header>
 
 		<div class="content">
@@ -76,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] =='POST') {
 						<form method="post" action="index.php">
 								<div>
 								<label for="email">
-									<strong> Email </strong>
+									<strong> Your Email </strong>
 									<?php if (isset($errors['email'])): ?> 
 									<strong class="error">is required</strong> 
 									<?php endif; ?>
