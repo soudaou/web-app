@@ -2,7 +2,7 @@
 /* CSS Document */
 
 html{
-	margin-top:6em;
+	margin:0;
 	padding:0;
 	font: normal 100%/1.5 "Century Gothic";
 /*	background-color:#333;
@@ -19,12 +19,13 @@ body{
 #body-wrapper{
 	margin:0 auto;
 	padding:0;
-	width:50em;
-	height:37.5em;
-	background: url(../images/background.jpg) no-repeat center;
+	width:100%;
+/*	height:37.5em;
+*/	background: url(../images/background.jpg) no-repeat center;
 }
 
 header{
+	margin:0 auto;
 	padding-top:2em;
 	width:100%;
 	background: rgb(41,137,216); /* Old browsers */
@@ -37,15 +38,16 @@ header{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2989d8', endColorstr='#2989d8',GradientType=1 ); /* IE6-9 */
 	
 }
+
 nav ul{
 	text-align:center;
-	margin: 0;
-	padding: 0;	
+	margin:0 auto;
+	padding:0;
 	list-style-type: none;
 }	
 nav li{
 /*,nav li:first-child*/
-	padding:5px 5px 5px 5px;
+	padding: 0.2em 4.8em 0.2em 5.2em;
 	color:#FFF;
 	border: solid thin #666;
 	background: rgb(181,189,200); /* Old browsers */
@@ -62,7 +64,7 @@ nav a,
 nav a:link,
 nav a:visited{
 	display: inline-block;
-	padding: 0.5em 0.75em;
+	padding: 0.5em 0 0.05em;
 	color: #fff;
 	font-size: 1.25em;
 	text-decoration: none;
@@ -96,17 +98,10 @@ figcaption{
 	text-align:center;
 }
 .content{
-	margin:0;
-	padding:2em 2em 2em 2em;
-/*	background-color:#CC0;
-*/}
-/*h1{
-	text-align: center;
+	margin:0 auto;
+	padding:0;
+	width:60%;
 }
-nav{
-	
-	text-align: center;
-}*/
 
 .top-login{
 	margin-top:1em;
@@ -115,7 +110,7 @@ nav{
 }
 .top-login img{
 	float:left;
-	margin-top:0.5em;
+	margin-top:0.7em;
 	margin-right:1em;
 }
 h2{
@@ -157,9 +152,9 @@ p{
 	font-size:0.8em;
 }
 button{
-	margin-top:2em;
+/*	margin-top:2em;
 	width:6em;
-	height:2em;
+	height:2em;*/
 	color:#FFFFFF;
 	background-color:#3FA9F5;
 }
@@ -177,7 +172,7 @@ button{
 }*/
 
 
-/***************************SIGN_UP PAGE**************************************/
+/***************************SIGN UP PAGE**************************************/
 
 .container{
 	/*width:400px;
@@ -193,6 +188,55 @@ button{
 	color:#FFFFFF;
 	background-color:#06C;
 }
+
+/***************************MAIN PAGE**************************************/
+.main-pg-container{
+	margin:0 auto;
+	padding:0;
+/*	width:25em/*50%*/;
+*/	height:17em/*46%*/;
+}
+.content p{
+	color:#FFFFFF;
+	font-size:1.2em;
+}
+
+/***************************CREATE LIST PAGE**************************************/
+.exercise-list-container{
+	margin:0 auto;
+	padding:0;
+/*	width:25em/*50%*/;
+*/	height:17em/*46%*/;
+}
+/*.exercise-list-container {
+	position:relative;
+}*/
+.exercise-list ul{
+	text-align:left;
+	margin:0;
+	padding:0;
+	list-style-type: none;
+}
+.exercise-list li{
+	color:#006AD5;
+	display:inline-block;
+}
+/***************************MY LIST PAGE**************************************/
+.my-list{
+	margin-top:1em;
+	
+	color:#006AD5;
+	list-style-type: none;
+	display:inline;
+}
+/*.check-list{
+}
+.check-box{
+	float:left;
+}
+.exercise-list{
+	float:left;
+}*/
 /*
 @media all and (min-width: 600px) {
 	
@@ -218,9 +262,8 @@ nav li{
 
 }
 
-
-@media all and (min-width: 1000px) {
-
+*/
+/*@media all and (min-width: 300px) {
 
 }
 */
