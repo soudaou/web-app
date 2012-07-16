@@ -22,27 +22,30 @@ $results = $sql->fetchALL();
 </head>
 
 <body>
-	<header>
-		<div class="logo">
-			<a href="main-pg.php"><img src="images/logo1.png" alt="Just Design logo"></a>
+	<div id="body-wrapper">
+		<<div id="body-wrapper">
+			<header>
+				<h1><a href="index.php"><img src="images/logo1.png" alt="Just Design logo"></a></h1>
+				<nav>
+					<ul>
+						<li><a href="create-list.php"> <strong> Create my List </strong> </a></li>
+						<li><a href="my-list.php"><strong> My List </strong></a></li>
+						<li><a href="edit-list.php"><strong> Edit List </strong></a></li>
+						<li><a href="log-out.php"><strong>Log out</strong></a></li>
+					</ul>
+				</nav>
+			</header>
+		
+		
+		<div class="content">
+			<div class="main-pg-container">
+				<p>1. Yay!! You can start by creating a new list</p>
+				<p>2. You can also edite your list</p>
+				<p>3. You can view your list</p>
+			</div>
 		</div>
-		<nav>
-			<ul>
-				<li><a href="create-list.html">Create my List</a></li>
-				<li><a href="my-list.php">My List</a></li>
-				<li><a href="edit-list.php">Edit List</a></li>
-			</ul>
-		</nav>
-	</header>
-	
-	
-	<div class="content">
-		<p>Yay!! You can start by creating a new list</p>
-		<p>You can also edite your list</p>
-		<p>You can view your list</p>
-	</div>
 
-
+</div>
 	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
 	<!--<script src="js/my-list.js"></script>-->
 </body>
