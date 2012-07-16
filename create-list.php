@@ -1,17 +1,18 @@
 <?php
 
 require_once 'includes/db.php';
+//require_once 'includes/form-processor.php';
 
-$sql = $db->query('
-	SELECT id, email
-	FROM mep_users
+$sql = $db->prepare('
+	SELECT  id, name_exercise
+		FROM mep_exercises
 ');
-// This will display the last error created by our database
-// Should get rid of it as soonas you find your error
-//var_dump($db->errorInfo());
 
+//var_dump($db->errorInfo());
+$sql->execute();
 $results = $sql->fetchALL();
-// The dino variable is for each iteration
+
+//print_r($results);
 
 ?><!DOCTYPE HTML>
 <html>
@@ -24,44 +25,58 @@ $results = $sql->fetchALL();
 </head>
 
 <body>
-	<header>
-		<div class="logo">
-			<a href="index.php"><img src="images/logo1.png" alt="Just Design logo"></a>
-		</div>
-		<nav>
-			<ul>
-				<li><a href="create-list.html"> <strong> Create my List </strong> </a></li>
-				<li><a href="#"><strong> My List </strong></a></li>
-				<li><a href="#"><strong> Edit List </strong></a></li>
-			</ul>
-		</nav>
-	</header>
-
-	<div class="content">
+	<div id="body-wrapper">
+		<header>
+			<div class="logo">
+				<a href="index.php"><img src="images/logo1.png" alt="Just Design logo"></a>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="create-list.php"> <strong> Create my List </strong> </a></li>
+					<li><a href="my-list.php"><strong> My List </strong></a></li>
+					<li><a href="edit-list.php"><strong> Edit List </strong></a></li>
+					<li><a href="log-out.php"><strong>Log out</strong></a></li>
+				</ul>
+			</nav>
+		</header>
 	
-		<h1> <strong> This application is for exercise fanatics </strong> </h1>
 		<div class="content">
-			<fieldset>
-            <legend>
-            	<strong>Choose 7 Exercise: </strong>
-                <?php if (isset($errors['preferredlang'])): ?> 
-            	<strong class="error">Must choose 7!</strong> 
-				<?php endif; ?>
-            </legend>
-            <input type="radio" id="english" name="preferredlang" value="english">
-            <label for="english">English</label>
-                
-            <input type="radio" id="french" name="preferredlang" value="french">
-            <label for="french">French</label>
-                
-            <input type="radio" id="spanish" name="preferredlang" value="spanish">
-            <label for="spanish">Spanish</label>
-        </fieldset>
+			<div class="exercise-list-container">
+			<form method="post" actions="add.php">
+				<fieldset>
+					<legend>
+						<h2><strong>Choose 7 Exercise for your week: </strong></h2>
+						<?php if (isset($errors['exerciseCheck'])): ?> 
+						<strong class="error">Must choose 7!</strong> 
+						<?php endif; ?>
+					</legend>
+					
+					<div class="check-list">
+						<label for="check">
+								<?php foreach ($results as $exercise) : ?>
+								
+									<div class="check-box">
+										<input type="checkbox" id="checkbox" name="checkbox" vale="1">
+									</div>
+									<div class="exercise-list">
+										<ul>
+											<li><strong><?php echo $exercise['name_exercise']; ?></strong></li>
+										</ul>
+									</div>
+								<?php endforeach ?>
+							
+							<?php if (isset($errors['terms'])): ?> 
+								<strong class="error">Must choose 7 exercises!</strong> 
+							<?php endif; ?>
+						</label>
+					</div>
+				</fieldset>
+					<button type="submit">Save</button>
+				</form>
+			</div>
 		</div>
-		
-	</div>
-
-	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
-	<!--<script src="js/my-list.js"></script>-->
+</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/form-validation.js"></script>
 </body>
 </html>
