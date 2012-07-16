@@ -32,6 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
 <meta charset="utf-8">
 	<title>Registration Form Validation</title>
+	<meta name="viewport" content="width=device-width">
 	<link href="css/general.css" rel="stylesheet">
 </head>
 
@@ -39,13 +40,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<div id="body-wrapper">
 		<header>
 			<h1><a href="index.php"><img src="images/logo1.png" alt="Just Design logo"></a></h1>
-			<nav>
+			<!--<nav>
 				<ul>
 					<li><a href="create-list.html"> <strong> Create my List </strong> </a></li>
 					<li><a href="#"><strong> My List </strong></a></li>
 					<li><a href="#"><strong> Edit List </strong></a></li>
 				</ul>
-			</nav>
+			</nav>-->
 		</header>
 	
 		<div class="content">
@@ -59,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 						<form method="post" action="sign-up.php">
 							 <div>
 								<label for="email">
-									<strong> Email </strong>
+									<strong> Your Email </strong>
 									<?php if (isset($errors['email'])): ?> 
 									<strong class="error">is required</strong> 
 									<?php endif; ?>
