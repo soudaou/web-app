@@ -1,9 +1,15 @@
 <?php
+session_start();
 
-empty_array() = empty_session();
+$_SESSION = array();
+$_SESSION = empty_session;
 
 session_destroy();
 
-unset($foo);
+unset($bar['id']);
 header("location:/index.php");
 //exit();
+
+
+
+?>
