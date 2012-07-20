@@ -137,6 +137,9 @@ h1{
 .form-login{
 	margin-top:2em;
 }
+/*.form-login p{
+	color:#000;
+}*/
 .form-login p a{
 	color:#0066FF;
 }
@@ -149,7 +152,7 @@ input{
 	border-radius:0.25em 0.25em 0.25em 0.25em;
 }
 p{
-	font-size:0.8em;
+	color:#000;
 }
 button{
 /*	margin-top:2em;
