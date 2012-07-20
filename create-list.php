@@ -1,18 +1,46 @@
 <?php
 
 require_once 'includes/db.php';
-//require_once 'includes/form-processor.php';
+$errors = array();
+
+$checkbox = filter_input(INPUT_POST, 'checkbox', FILTER_SANITIZE_NUMBER_INT, FILTER_FORCE_ARRAY);
+if (!is_array($checkbox)) $checkbox = array();
+/*Validation*/
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+		
+		if (count($checkbox) != 7){
+			$errors['checkbox'] = true;
+		}
+		if (empty($errors)) {
+			$sql = $db->prepare('
+			INSERT INTO mep_exerciselist (name_exercise, user_id )
+			VALUES (:name_exercise, :user_id :)
+			
+			INSERT INTO l.user_id, l.exercise_id, e.name_exercise
+			FROM mep_exerciselist as l
+			INNER JOIN mep_exercises as e
+			ON l.exercise_id = e.id
+			WHERE l.user_id = :user_id
+			');
+			
+			$sql->execute();
+			var_dump($db->errorInfo());
+			header('Location: my-list.php');
+			exit;
+		}
+}
 
 $sql = $db->prepare('
 	SELECT  id, name_exercise
-		FROM mep_exercises
+	FROM mep_exercises
 ');
 
 //var_dump($db->errorInfo());
 $sql->execute();
 $results = $sql->fetchALL();
-
 //print_r($results);
+
 
 ?><!DOCTYPE HTML>
 <html>
@@ -35,39 +63,32 @@ $results = $sql->fetchALL();
 					<li><a href="create-list.php"> <strong> Create my List </strong> </a></li>
 					<li><a href="my-list.php"><strong> My List </strong></a></li>
 					<li><a href="edit-list.php"><strong> Edit List </strong></a></li>
-					<li><a href="log-out.php"><strong>Log out</strong></a></li>
+					<li id="signout"><a href="signout.php"><strong>Log out</strong></a></li>
 				</ul>
 			</nav>
 		</header>
 	
 		<div class="content">
 			<div class="exercise-list-container">
-			<form method="post" actions="add.php">
+			<form method="post" actions="create-list.php">
 				<fieldset>
-					<legend>
-						<h2><strong>Choose 7 Exercise for your week: </strong></h2>
-						<?php if (isset($errors['exerciseCheck'])): ?> 
-						<strong class="error">Must choose 7!</strong> 
-						<?php endif; ?>
-					</legend>
-					
+					<legend><h2><strong>Choose 7 Exercise for your week: </strong></h2></legend>
+					<?php if (isset($errors['checkbox'])): ?> <strong class="error">You must choose 7!</strong> <?php endif; ?>
 					<div class="check-list">
 						<label for="check">
 								<?php foreach ($results as $exercise) : ?>
 								
 									<div class="check-box">
-										<input type="checkbox" id="checkbox" name="checkbox" vale="1">
+										<input type="checkbox" id="checkbox" name="checkbox[]" value="<?php echo $exercise['id']; ?>"<?php if (in_array($exercise['id'], $checkbox)) { echo ' checked'; } ?>>
+									
 									</div>
 									<div class="exercise-list">
 										<ul>
 											<li><strong><?php echo $exercise['name_exercise']; ?></strong></li>
 										</ul>
 									</div>
+									
 								<?php endforeach ?>
-							
-							<?php if (isset($errors['terms'])): ?> 
-								<strong class="error">Must choose 7 exercises!</strong> 
-							<?php endif; ?>
 						</label>
 					</div>
 				</fieldset>
@@ -75,8 +96,6 @@ $results = $sql->fetchALL();
 				</form>
 			</div>
 		</div>
-</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script src="js/form-validation.js"></script>
+	</div>
 </body>
 </html>
