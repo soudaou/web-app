@@ -2,10 +2,6 @@
 require_once 'includes/db.php';
 session_start();
 
-//session_destroy();
-//header("location:/index.php");
-//exit();
-
 $errors = array();
 
 $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
