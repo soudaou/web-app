@@ -224,6 +224,9 @@ button{
 	color:#006AD5;
 	display:inline-block;
 }
+.error{
+	color:#C00;
+}
 /***************************MY LIST PAGE**************************************/
 .my-list{
 	margin-top:1em;
