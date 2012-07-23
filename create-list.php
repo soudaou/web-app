@@ -1,8 +1,9 @@
 <?php
-
+session_start();
 require_once 'includes/db.php';
 $errors = array();
 
+//print_r($_SESSION);
 $checkbox = filter_input(INPUT_POST, 'checkbox', FILTER_SANITIZE_NUMBER_INT, FILTER_FORCE_ARRAY);
 if (!is_array($checkbox)) $checkbox = array();
 /*Validation*/
@@ -12,23 +13,32 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 		if (count($checkbox) != 7){
 			$errors['checkbox'] = true;
 		}
+		
 		if (empty($errors)) {
+			//print_r($checkbox);
 			$sql = $db->prepare('
-			INSERT INTO mep_exerciselist (name_exercise, user_id )
-			VALUES (:name_exercise, :user_id :)
-			
-			INSERT INTO l.user_id, l.exercise_id, e.name_exercise
-			FROM mep_exerciselist as l
-			INNER JOIN mep_exercises as e
-			ON l.exercise_id = e.id
-			WHERE l.user_id = :user_id
+			INSERT INTO mep_exerciselist (exercise_id, user_id )
+			VALUES (:exercise_id, :user_id)
 			');
 			
-			$sql->execute();
-			var_dump($db->errorInfo());
+			foreach ($checkbox as $exercise) {
+				$sql->bindValue(':exercise_id', $exercise, PDO::PARAM_INT);
+				$sql->bindValue(':user_id', $_SESSION['user_id'], PDO::PARAM_INT);
+				$sql->execute();
+			}
+			//var_dump($db->errorInfo());
 			header('Location: my-list.php');
 			exit;
 		}
+		
+		$sql = $db->prepare('
+			DELETE FROM mep_exerciselist
+			WHERE exercise_id = :exercise_id,
+			user_id = :user_id
+		');
+		$sql->bindValue(':exercise_id', $exercise, PDO::PARAM_INT);
+		$sql->bindValue(':exercise_id', $exercise_id, PDO::PARAM_INT);
+		$sql->execute();
 }
 
 $sql = $db->prepare('
@@ -49,7 +59,6 @@ $results = $sql->fetchALL();
 	<title>My XERCISE Planner</title>
 	<meta name="viewport" content="width=device-width">
 	<link href="css/general.css" rel="stylesheet">
-	
 </head>
 
 <body>
@@ -63,7 +72,7 @@ $results = $sql->fetchALL();
 					<li><a href="create-list.php"> <strong> Create my List </strong> </a></li>
 					<li><a href="my-list.php"><strong> My List </strong></a></li>
 					<li><a href="edit-list.php"><strong> Edit List </strong></a></li>
-					<li id="signout"><a href="signout.php"><strong>Log out</strong></a></li>
+					<li id="signout"><a href="sign-out.php"><strong>Log out</strong></a></li>
 				</ul>
 			</nav>
 		</header>
@@ -77,23 +86,22 @@ $results = $sql->fetchALL();
 					<div class="check-list">
 						<label for="check">
 								<?php foreach ($results as $exercise) : ?>
-								
 									<div class="check-box">
 										<input type="checkbox" id="checkbox" name="checkbox[]" value="<?php echo $exercise['id']; ?>"<?php if (in_array($exercise['id'], $checkbox)) { echo ' checked'; } ?>>
-									
 									</div>
 									<div class="exercise-list">
 										<ul>
 											<li><strong><?php echo $exercise['name_exercise']; ?></strong></li>
 										</ul>
 									</div>
-									
 								<?php endforeach ?>
 						</label>
 					</div>
 				</fieldset>
 					<button type="submit">Save</button>
 				</form>
+				
+				<?php print_r($checkbox); ?>
 			</div>
 		</div>
 	</div>
