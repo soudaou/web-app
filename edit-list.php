@@ -13,19 +13,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 			$errors['checkbox'] = true;
 		}
 		if (empty($errors)) {
+			//print_r($checkbox);
 			$sql = $db->prepare('
-			INSERT INTO mep_exerciselist (name_exercise, id )
-			VALUES (:name_exercise, :id :)
+			UPDATE mep_exerciselist 
+			SET exercise_id = :exercise_id
+			WHERE user_id = :user_id
 			');
-			$sql->bindValue(':name_exercise', $name_exercise, PDO::PARAM_STR);
-			$sql->bindValue(':id', $id, PDO::PARAM_INT);
-			$sql->execute();
-			var_dump($db->errorInfo());
+			foreach ($checkbox as $exercise) {
+				$sql->bindValue(':exercise_id', $exercise, PDO::PARAM_INT);
+				$sql->bindValue(':user_id', $_SESSION['user_id'], PDO::PARAM_INT);
+				$sql->execute();
+			}
+			//var_dump($db->errorInfo());
 			header('Location: my-list.php');
 			exit;
 		}
 }
-
 		$sql = $db->prepare('
 		SELECT  id, name_exercise
 		FROM mep_exercises
@@ -36,7 +39,6 @@ $sql->execute();
 $results = $sql->fetchALL();
 
 //print_r($results);
-
 		$sql = $db->prepare('
 		SELECT l.user_id, l.exercise_id, e.name_exercise
 		FROM mep_exerciselist as l
@@ -45,12 +47,13 @@ $results = $sql->fetchALL();
 		WHERE l.user_id = :user_id
 		');
 		$sql->bindValue(':user_id', $_SESSION['user_id'], PDO::PARAM_STR);
-$sql->execute();
-$userex = $sql->fetchALL();
+		$sql->execute();
+		$userex = $sql->fetchALL();
 
 $user_exercise_ids = array();
+
 foreach ($userex as $ue) {
-$user_exercise_ids[] = $ue['exercise_id'];
+	$user_exercise_ids[] = $ue['exercise_id'];
 }
 //print_r($userex);
 
@@ -76,7 +79,7 @@ $user_exercise_ids[] = $ue['exercise_id'];
 					<li><a href="create-list.php"> <strong> Create my List </strong> </a></li>
 					<li><a href="my-list.php"><strong> My List </strong></a></li>
 					<li><a href="edit-list.php"><strong> Edit List </strong></a></li>
-					<li><a href="log-out.php"><strong>Log out</strong></a></li>
+					<li><a href="sign-out.php"><strong>Log out</strong></a></li>
 				</ul>
 			</nav>
 		</header>
