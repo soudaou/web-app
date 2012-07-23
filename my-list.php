@@ -12,7 +12,7 @@ $sql = $db->prepare('
 
 $sql->bindValue(':user_id', $_SESSION['user_id'], PDO::PARAM_STR);
 // This will display the last error created by our database
-// Should get rid of it as soonas you find your error
+// Should get rid of it as soon as you find your error
 //var_dump($_SESSION);
 //var_dump($db->errorInfo());
 
@@ -42,7 +42,7 @@ $results = $sql->fetchALL();
 					<li><a href="create-list.php"> <strong> Create my List </strong> </a></li>
 					<li><a href="my-list.php"><strong> My List </strong></a></li>
 					<li><a href="edit-list.php"><strong> Edit List </strong></a></li>
-					<li><a href="log-out.php"><strong>Log out</strong></a></li>
+					<li><a href="sign-out.php"><strong>Log out</strong></a></li>
 				</ul>
 			</nav>
 		</header>
