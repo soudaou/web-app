@@ -1,15 +1,18 @@
 <?php
-
+session_start();
 require_once 'includes/db.php';
 
+
+/*
 $sql = $db->query('
 	SELECT id, email
 	FROM mep_users
 ');
-
+*/
+var_dump($_SESSION);
 //var_dump($db->errorInfo());
 
-$results = $sql->fetchALL();
+//$results = $sql->fetchALL();
 
 ?><!DOCTYPE HTML>
 <html>
@@ -23,7 +26,7 @@ $results = $sql->fetchALL();
 
 <body>
 	<div id="body-wrapper">
-		<<div id="body-wrapper">
+		<div id="body-wrapper">
 			<header>
 				<h1><a href="index.php"><img src="images/logo1.png" alt="Just Design logo"></a></h1>
 				<nav>
@@ -31,7 +34,7 @@ $results = $sql->fetchALL();
 						<li><a href="create-list.php"> <strong> Create my List </strong> </a></li>
 						<li><a href="my-list.php"><strong> My List </strong></a></li>
 						<li><a href="edit-list.php"><strong> Edit List </strong></a></li>
-						<li><a href="log-out.php"><strong>Log out</strong></a></li>
+						<li><a href="sign-out.php"><strong>Log out</strong></a></li>
 					</ul>
 				</nav>
 			</header>
