@@ -1,5 +1,5 @@
 <?php 
-
+session_start();
 
 $errors = array();
 
@@ -21,7 +21,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		');
 		$sql->bindValue(':email', $email, PDO::PARAM_STR);
 		$sql->execute();
+		
+		$result = $db->lastInsertId();
 		//var_dump($sql->errorInfo());
+		$_SESSION['user_id'] = $result;
+		
+		var_dump($_SESSION);
+		
 		header('Location: main-pg.php');
 		exit;
 	}
