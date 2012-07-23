@@ -3,7 +3,7 @@
 
 #### 1. Q- What features have you accomplished in the past week?
 
-	A-I was able in the past week to get my pages somehow working.
+	A-I was able in the past week to get my pages somewhat working.
 
 #### 2. Q- Did you achieve the previous week�s goals?
 
