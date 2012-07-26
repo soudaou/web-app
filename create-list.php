@@ -33,11 +33,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 		
 		$sql = $db->prepare('
 			DELETE FROM mep_exerciselist
-			WHERE exercise_id = :exercise_id,
-			user_id = :user_id
+			WHERE user_id = :user_id
+			
 		');
-		$sql->bindValue(':exercise_id', $exercise, PDO::PARAM_INT);
-		$sql->bindValue(':exercise_id', $exercise_id, PDO::PARAM_INT);
+		//exercise_id = :exercise_id,
+		//$sql->bindValue(':exercise_id', $exercise, PDO::PARAM_INT);
+		$sql->bindValue(':user_id', $user_id, PDO::PARAM_INT);
 		$sql->execute();
 }
 
