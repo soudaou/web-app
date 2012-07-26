@@ -3,10 +3,10 @@ session_start();
 require_once 'includes/db.php';
 $errors = array();
 
+$user_id = filter_input(INPUT_GET, 'user_id', FILTER_SANITIZE_NUMBER_INT);
 //print_r($_SESSION);
 $checkbox = filter_input(INPUT_POST, 'checkbox', FILTER_SANITIZE_NUMBER_INT, FILTER_FORCE_ARRAY);
 if (!is_array($checkbox)) $checkbox = array();
-/*Validation*/
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 		
