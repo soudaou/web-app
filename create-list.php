@@ -34,7 +34,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 		header('Location: my-list.php');
 		exit;
 		}
-
 }
 // Getting the data from the table //
 $sql = $db->prepare('
