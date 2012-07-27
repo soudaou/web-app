@@ -5,7 +5,6 @@ $errors = array();
 
 $checkbox = filter_input(INPUT_POST, 'checkbox', FILTER_SANITIZE_NUMBER_INT, FILTER_FORCE_ARRAY);
 if (!is_array($checkbox)) $checkbox = array();
-/*Validation*/
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 		
@@ -17,8 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 			$sql = $db->prepare('
 			UPDATE mep_exerciselist 
 			SET exercise_id = :exercise_id
-			,user_id = :user_id
-			WHERE :exercise_id, :user_id
+			AND user_id = :user_id
 			');
 			foreach ($checkbox as $exercise) {
 				$sql->bindValue(':exercise_id', $exercise, PDO::PARAM_INT);
