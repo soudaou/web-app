@@ -44,12 +44,13 @@ nav ul{
 	margin:0 auto;
 	padding:0;
 	list-style-type: none;
+	
 }	
 nav li{
 /*,nav li:first-child*/
 	padding: 0.2em 4.8em 0.2em 5.2em;
 	color:#FFF;
-	border: solid thin #666;
+	/*border: solid thin #666;*/
 	background: rgb(181,189,200); /* Old browsers */
 	background: -moz-linear-gradient(top, rgba(181,189,200,1) 0%, rgba(104,104,104,1) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(181,189,200,1)), color-stop(100%,rgba(104,104,104,1))); /* Chrome,Safari4+ */
@@ -196,8 +197,8 @@ button{
 .main-pg-container{
 	margin:0 auto;
 	padding:0;
-/*	width:25em/*50%*/;
-*/	height:17em/*46%*/;
+/*	width:25em/*50%;*/
+	height:17em/*46%*/;
 }
 .content p{
 	color:#FFFFFF;
@@ -208,8 +209,8 @@ button{
 .exercise-list-container{
 	margin:0 auto;
 	padding:0;
-/*	width:25em/*50%*/;
-*/	height:17em/*46%*/;
+/*	width:25em/*50%;*/
+	height:17em/*46%*/;
 }
 /*.exercise-list-container {
 	position:relative;
@@ -244,11 +245,22 @@ button{
 	float:left;
 }*/
 /*
+/***************************ABOUT PAGE**************************************/
+.about p{
+	font-size:1.8em;
+	color:#006AD5;
+}
+.about ul{
+	list-style-type: none;
+	color:#fff;
+	font-size:1.5em;
+}
 
 /***********FOOTER ************/
 .copyright p{
 	margin:0, auto;
 	padding:0;
+	
 }
 
 /*
