@@ -23,11 +23,17 @@ include 'includes/wrapper-top.php';
 		
 		<div class="content">
 			<div class="main-pg-container">
-			<p>This web application is for those who want to stick to a schedule</p>
-				<p>With this app, you can:</p>
-				<p>Create a new list</p>
-				<p> Edit your list</p>
-				<p> View your list</p>
+				<div class="about">
+					<p><strong>This amazing application will make you excited and ready to exercise all the time.
+
+It will spice up your routine every week and you will never be bored again.</strong></p>
+					<ul>
+						<li><strong>With this application, you can:</strong></li>
+						<li>- Create a new list</li>
+						<li> - Edit your list</li>
+						<li> - View your list</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 
