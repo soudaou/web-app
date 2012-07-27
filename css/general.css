@@ -244,6 +244,14 @@ button{
 	float:left;
 }*/
 /*
+
+/***********FOOTER ************/
+.copyright p{
+	margin:0, auto;
+	padding:0;
+}
+
+/*
 @media all and (min-width: 600px) {
 	
 html{
