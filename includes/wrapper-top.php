@@ -12,7 +12,7 @@
 	
 		<div id="body-wrapper">
 			<header>
-				<h1<?php if ($page == 'home') { ?> class="current" <?php } ?>><a href="index.php"><img src="images/logo1.png" alt="Just Design logo"></a></h1>
+				<h1<?php if ($page == 'home') { ?> class="current" <?php } ?>><a href="main-pg.php"><img src="images/logo1.png" alt="Just Design logo"></a></h1>
 				<nav>
 					<ul>
 						<li<?php if ($page == 'about') { ?> class="current" <?php } ?>><a href="about.php"> <strong> About </strong> </a></li>
