@@ -13,11 +13,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 			$errors['checkbox'] = true;
 		}
 		if (empty($errors)) {
-			//print_r($checkbox);
+			//print_r($errors);
 			$sql = $db->prepare('
 			UPDATE mep_exerciselist 
 			SET exercise_id = :exercise_id
-			WHERE user_id = :user_id
+			,user_id = :user_id
+			WHERE :exercise_id, :user_id
 			');
 			foreach ($checkbox as $exercise) {
 				$sql->bindValue(':exercise_id', $exercise, PDO::PARAM_INT);
@@ -35,6 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 		');
 
 //var_dump($db->errorInfo());
+
 $sql->execute();
 $results = $sql->fetchALL();
 
@@ -86,7 +88,6 @@ foreach ($userex as $ue) {
 	
 		<div class="content">
 			<div class="exercise-list">
-				</div>
 				<form method="post" actions="edit-list.php">
 				<fieldset>
 					<legend><h2><strong>Choose 7 Exercise for your week: </strong></h2></legend>
@@ -94,9 +95,8 @@ foreach ($userex as $ue) {
 					<div class="check-list">
 						<label for="check">
 								<?php foreach ($results as $exercise) : ?>
-								
 									<div class="check-box">
-										<input type="checkbox" id="checkbox" name="checkbox" value="1" <?php if (in_array($exercise['id'], $user_exercise_ids)) : ?>checked<?php endif; ?>>
+										<input type="checkbox" id="checkbox" name="checkbox[]" value="<?php echo $exercise['id']; ?>" <?php if (in_array($exercise['id'], $checkbox)) { echo ' checked'; } ?> <?php if (in_array($exercise['id'], $user_exercise_ids)) : ?>checked<?php endif; ?>>
 									</div>
 									<div class="exercise-list">
 										<ul>
@@ -104,16 +104,13 @@ foreach ($userex as $ue) {
 										</ul>
 									</div>
 								<?php endforeach ?>
-
 						</label>
 					</div>
 				</fieldset>
 					<button type="submit">Save</button>
 				</form>
+			</div>
 		</div>
-	
-		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
-		<!--<script src="js/my-list.js"></script>-->
 	</div>
 </body>
 </html>
