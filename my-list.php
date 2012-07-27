@@ -21,31 +21,10 @@ $results = $sql->fetchALL();
 
 //print_r($results);
 
-?><!DOCTYPE HTML>
-<html>
-<head>
-<meta charset="utf-8">
-	<title>My List</title>
-	<meta name="viewport" content="width=device-width">
-	<link href="css/general.css" rel="stylesheet">
-	
-</head>
-
-<body>
-	<div id="body-wrapper">
-		<header>
-			<div class="logo">
-				<a href="index.php"><img src="images/logo1.png" alt="Just Design logo"></a>
-			</div>
-			<nav>
-				<ul>
-					<li><a href="create-list.php"> <strong> Create my List </strong> </a></li>
-					<li><a href="my-list.php"><strong> My List </strong></a></li>
-					<li><a href="edit-list.php"><strong> Edit List </strong></a></li>
-					<li><a href="sign-out.php"><strong>Log out</strong></a></li>
-				</ul>
-			</nav>
-		</header>
+$title = 'My List - ';
+$page = 'list';
+include 'includes/wrapper-top.php';
+?>
 	
 		<div class="content">
 			<div class="exercise-list-container">
@@ -60,6 +39,5 @@ $results = $sql->fetchALL();
 	
 		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
 		<!--<script src="js/my-list.js"></script>-->
-	</div>
-</body>
-</html>
+
+<?php include 'includes/wrapper-bottom.php';?>
