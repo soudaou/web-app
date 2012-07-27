@@ -57,7 +57,7 @@ foreach ($userex as $ue) {
 }
 //print_r($userex);
 
-$title = 'Edit List - ';
+$title = 'Edit your List - ';
 $page = 'edit';
 include 'includes/wrapper-top.php';
 ?>
