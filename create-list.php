@@ -16,6 +16,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 // Adding the checked boxes into the database //
 		if (empty($errors)) {
 			//print_r($checkbox);
+			// Deleting the existing data before enering new data into table //
+		$sql = $db->prepare('
+			DELETE FROM mep_exerciselist
+			WHERE user_id = :user_id 
+
+		');
+		$sql->bindValue(':user_id', $_SESSION['user_id'], PDO::PARAM_INT);
+		$sql->execute();
+		
 			$sql = $db->prepare('
 			INSERT INTO mep_exerciselist (exercise_id, user_id )
 			VALUES (:exercise_id, :user_id)
@@ -29,17 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 			header('Location: my-list.php');
 			exit;
 		}
-// Deleting the existing data in the table //
-		$sql = $db->prepare('
-			DELETE FROM mep_exerciselist
-			WHERE exercise_id = :exercise_id
-			user_id = :user_id
-		');
-		//$sql->bindValue(':exercise_id', $exercise, PDO::PARAM_INT);
-		$sql->bindValue(':exercise_id', $exercise, PDO::PARAM_INT);
-		$sql->bindValue(':user_id', $_SESSION['user_id'], PDO::PARAM_INT);
-		//$sql->bindValue(':user_id', $user_id, PDO::PARAM_INT);
-		$sql->execute();
+
 }
 // Getting the data from the table //
 $sql = $db->prepare('
@@ -101,7 +100,7 @@ $results = $sql->fetchALL();
 					<button type="submit">Save</button>
 				</form>
 				
-				<?php print_r($checkbox); ?>
+				<?php /*?><?php print_r($checkbox); ?><?php */?>
 			</div>
 		</div>
 	</div>
