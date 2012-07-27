@@ -248,7 +248,7 @@ fieldset{
 
 /***********FOOTER ************/
 .copyright p{
-	margin:0, auto;
+	margin-top:10em;
 	padding:0;
 	background: rgb(41,137,216); /* Old browsers */
 	background: -moz-linear-gradient(left, rgba(41,137,216,1) 0%, rgba(30,87,153,1) 52%, rgba(41,137,216,1) 100%); /* FF3.6+ */
