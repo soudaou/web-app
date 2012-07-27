@@ -46,30 +46,10 @@ $results = $sql->fetchALL();
 //var_dump($db->errorInfo());
 //print_r($results);
 
-?><!DOCTYPE HTML>
-<html>
-<head>
-<meta charset="utf-8">
-	<title>My XERCISE Planner</title>
-	<meta name="viewport" content="width=device-width">
-	<link href="css/general.css" rel="stylesheet">
-</head>
-
-<body>
-	<div id="body-wrapper">
-		<header>
-			<div class="logo">
-				<a href="index.php"><img src="images/logo1.png" alt="Just Design logo"></a>
-			</div>
-			<nav>
-				<ul>
-					<li><a href="create-list.php"> <strong> Create my List </strong> </a></li>
-					<li><a href="my-list.php"><strong> My List </strong></a></li>
-					<li><a href="edit-list.php"><strong> Edit List </strong></a></li>
-					<li id="signout"><a href="sign-out.php"><strong>Log out</strong></a></li>
-				</ul>
-			</nav>
-		</header>
+$title = 'Create your List - ';
+$page = 'create';
+include 'includes/wrapper-top.php';
+?>
 	
 		<div class="content">
 			<div class="exercise-list-container">
@@ -98,6 +78,5 @@ $results = $sql->fetchALL();
 				<?php /*?><?php print_r($checkbox); ?><?php */?>
 			</div>
 		</div>
-	</div>
-</body>
-</html>
+		
+	<?php include 'includes/wrapper-bottom.php';?>
