@@ -20,9 +20,8 @@ include 'includes/wrapper-top.php';
 		
 		<div class="content">
 			<div class="main-pg-container">
-				<p>1. Yay!! You can start by creating a new list</p>
-				<p>2. You can also edite your list</p>
-				<p>3. You can view your list</p>
+				<h2>Welcome to the XERCISE app</h2>
+				<p> Start by creating a list to follow for a week</p>
 			</div>
 		</div>
 
