@@ -67,10 +67,10 @@ include 'includes/wrapper-top.php';
 ?>
 	
 		<div class="content">
-			<div class="exercise-list">
+			<div class="exercise-list-container">
 				<form method="post" actions="edit-list.php">
 				<fieldset>
-					<legend><h2><strong>Edit you list: </strong></h2></legend>
+					<legend><h2><strong>Edit your List: </strong></h2></legend>
 					<?php if (isset($errors['checkbox'])): ?> <strong class="error">You must choose 7!</strong> <?php endif; ?>
 					<div class="check-list">
 						<label for="check">

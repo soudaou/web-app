@@ -28,12 +28,14 @@ include 'includes/wrapper-top.php';
 	
 		<div class="content">
 			<div class="exercise-list-container">
-				<h2> <strong> My List </strong> </h2>
-				<div class="my-list">
-						<?php foreach ($results as $exercise) : ?>
-							<li><strong><?php echo $exercise['name_exercise']; ?></strong></li>
-						<?php endforeach ?>
-				</div>
+				<fieldset>
+				<legend><h2> <strong> My List </strong> </h2></legend>
+					<div class="my-list">
+							<?php foreach ($results as $exercise) : ?>
+								<li><strong><?php echo $exercise['name_exercise']; ?></strong></li>
+							<?php endforeach ?>
+					</div>
+				</fieldset>
 			</div>
 		</div>
 	
