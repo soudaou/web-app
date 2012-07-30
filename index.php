@@ -64,7 +64,6 @@ if ($_SERVER['REQUEST_METHOD'] =='POST') {
 		</header>
 
 		<div class="content">
-			<h1> <strong> This application is for exercise fanatics </strong> </h1>
 			<div class="container">
 				<div class="login-info">
 					<div class="top-login">
