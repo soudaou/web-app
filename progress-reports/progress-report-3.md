@@ -3,7 +3,7 @@
 
 #### 1. Q- What features have you accomplished in the past week?
 
-	A-I was able in the past week to get my create page and list fully functional.
+	A-I was able in the past week to get my create and list page fully functional.
 
 #### 2. Q- Did you achieve the previous week's goals?
 
