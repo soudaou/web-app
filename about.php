@@ -24,12 +24,11 @@ include 'includes/wrapper-top.php';
 		<div class="content">
 			<div class="main-pg-container">
 				<div class="about">
-					<p><strong>This amazing application will make you excited and ready to exercise all the time.
-
-It will spice up your routine every week and you will never be bored again.</strong></p>
+					<p><strong>This amazing application will get you all ready to exercise.
+					It will mix up your routine every week and you will never be bored again.</strong></p>
 					<ul>
 						<li><strong>With this application, you can:</strong></li>
-						<li>- Create a new list</li>
+						<li> - Create a new list</li>
 						<li> - Edit your list</li>
 						<li> - View your list</li>
 					</ul>
