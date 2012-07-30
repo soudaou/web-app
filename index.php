@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] =='POST') {
 <body>
 	<div id="body-wrapper">
 		<header>
-			<h1><a href="index.php"><img src="images/logo1.png" alt="Just Design logo"></a></h1>
+			<h1><a href="index.php"><img src="images/logo.png" alt="Just Design logo"></a></h1>
 		<!--	<nav>
 				<ul>
 					<li><a href="create-list.html"> <strong> Create my List </strong> </a></li>
