@@ -7,25 +7,31 @@ $checkbox = filter_input(INPUT_POST, 'checkbox', FILTER_SANITIZE_NUMBER_INT, FIL
 if (!is_array($checkbox)) $checkbox = array();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-		
+// Validation for error //
 		if (count($checkbox) != 7){
 			$errors['checkbox'] = true;
 		}
 		if (empty($errors)) {
-			//print_r($errors);
-			$sql = $db->prepare('
-			UPDATE mep_exerciselist 
-			SET exercise_id = :exercise_id
-			AND user_id = :user_id
-			');
-			foreach ($checkbox as $exercise) {
-				$sql->bindValue(':exercise_id', $exercise, PDO::PARAM_INT);
-				$sql->bindValue(':user_id', $_SESSION['user_id'], PDO::PARAM_INT);
-				$sql->execute();
-			}
-			//var_dump($db->errorInfo());
-			header('Location: my-list.php');
-			exit;
+		// Deleting the existing data before enering new data into table //
+		$sql = $db->prepare('
+			DELETE FROM mep_exerciselist
+			WHERE user_id = :user_id 
+		');
+		$sql->bindValue(':user_id', $_SESSION['user_id'], PDO::PARAM_INT);
+		$sql->execute();
+		// Adding the checked boxes into the database //
+		$sql = $db->prepare('
+		INSERT INTO mep_exerciselist (exercise_id, user_id )
+		VALUES (:exercise_id, :user_id)
+		');
+		foreach ($checkbox as $exercise) {
+			$sql->bindValue(':exercise_id', $exercise, PDO::PARAM_INT);
+			$sql->bindValue(':user_id', $_SESSION['user_id'], PDO::PARAM_INT);
+			$sql->execute();
+		}
+		//var_dump($db->errorInfo());
+		header('Location: my-list.php');
+		exit;
 		}
 }
 		$sql = $db->prepare('
@@ -33,11 +39,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 		FROM mep_exercises
 		');
 
-//var_dump($db->errorInfo());
-
 $sql->execute();
 $results = $sql->fetchALL();
-
+//var_dump($db->errorInfo());
 //print_r($results);
 		$sql = $db->prepare('
 		SELECT l.user_id, l.exercise_id, e.name_exercise
