@@ -3,7 +3,7 @@
 
 #### 1. Q- What features have you accomplished in the past week?
 
-	A-I was able in the past week to get my create page and list fully functional.
+	A-I was able in the past week to get my create and list page fully functional.
 
 #### 2. Q- Did you achieve the previous week's goals?
 
@@ -19,11 +19,11 @@
 
 #### 5. Q- What parts of the application, in the past week, were enjoyable?
 
-	A- Getting the the checkboxes to get inserted to the database ,then viewing in another page.
+	A- Getting the the checkboxes to get inserted to the database ,then viewing the selected exercises in another page.
 
 #### 6. Q- What parts of the application, in the past week, were frustrating?
 
-	A- Getting the the creat-page to fully work was challenging. The DELETE function was a little tough.
+	A- Getting the creat-page to fully work was challenging. The DELETE function was a little tough.
 
 #### 7. Q- Did you have to radically alter something you'd finished previously?
 
