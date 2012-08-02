@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		
 		var_dump($_SESSION);
 		
-		header('Location: main-pg.php');
+		header('Location:about.php');
 		exit;
 	}
 }
@@ -79,6 +79,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				</div>
 			</div>
 		</div>
-	</div>
-</body>
-</html>
+<?php include 'includes/wrapper-bottom.php'; ?>
