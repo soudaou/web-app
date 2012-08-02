@@ -102,10 +102,8 @@ h1{
 	color:#fff;
 	font-size:2em;
 }
-
 .top-login{
-	margin-top:1em;
-	padding-top:0.8em;
+	padding-top:0.6em;
 	height:2em;
 }
 .top-login img{
@@ -166,7 +164,7 @@ button{
 	color:#fff;
 	font-size:1.3em;
 }
-/***************************CREATE LIST PAGE**************************************/
+/***************************CREATE LIST PAGE********************************/
 .content{
 	width:80%;
 }
@@ -192,7 +190,7 @@ fieldset{
 .error{
 	color:#C00;
 }
-/***************************MY LIST PAGE**************************************/
+/***************************MY LIST PAGE***********************************/
 .my-list{
 	margin-top:1em;
 	color:#006AD5;
@@ -225,34 +223,23 @@ html{
 	margin:0;
 	padding:0;
 	font: normal 100%/1.5 "Century Gothic";
-/*	background-color:#333;
-*/	width:100%;
-
+	width:100%;
 }
 body{
-	margin: 0 auto;
 	padding:0;
 	background-color:#999;
 	width:60.8em;
 	border-radius:4px 4px 4px 4px;
 }
 #body-wrapper{
-	margin:0 auto;
 	padding:0;
-	
 	background: url(../images/background.jpg) no-repeat center;
 }
-/*#header-wrapper{
-	width:100%;
-}*/
 header{
-	margin:0 auto;
 	padding-top:2em;
-/*	width:100%;
-*/}
+}
 nav ul{
 	text-align:center;
-	margin:0 auto;
 	padding:0;
 	list-style-type: none;
 	
@@ -260,7 +247,6 @@ nav ul{
 nav li{
 	padding: 0.2em 3.2em 0.2em 3.2em;
 	color:#FFF;
-	/*border: solid thin #666;*/
 	display: inline;
 }
 nav a,
@@ -272,9 +258,7 @@ nav a:visited{
 	font-size: 1.25em;
 	text-decoration: none;
 	text-transform: uppercase;
-	color: #fff;
 }
-
 nav a:hover,
 nav a:focus,
 nav a:active{
@@ -297,23 +281,12 @@ figcaption{
 	display: block;
 }
 .logo{
-	
 	text-align:center;
 }
 .content{
 	margin:0 auto;
 	padding:0;
 	width:30%;
-}
-.top-login{
-	margin-top:1em;
-	padding-top:0.8em;
-	height:2em;
-}
-.top-login img{
-	float:left;
-	margin-top:0.7em;
-	margin-right:1em;
 }
 h2{
 	margin:0;
@@ -327,8 +300,8 @@ h1{
 .container{
 	margin:0 auto;
 	background: url("../images/container.png") no-repeat center;
-	width:25em/*50%*/;
-	height:17em/*46%*/;
+	width:25em;
+	height:17em;
 }
 .login-info{
 	margin-top:1em;
@@ -338,9 +311,6 @@ h1{
 .form-login{
 	margin-top:2em;
 }
-/*.form-login p{
-	color:#000;
-}*/
 .form-login p a{
 	color:#0066FF;
 }
@@ -356,9 +326,6 @@ p{
 	color:#000;
 }
 button{
-/*	margin-top:2em;
-	width:6em;
-	height:2em;*/
 	color:#FFFFFF;
 	background-color:#0073E5;
 }
