@@ -2,8 +2,6 @@
 session_start();
 require_once 'includes/db.php';
 
-$title = 'Home - ';
-$page = 'home';
 /*
 $sql = $db->query('
 	SELECT id, email
