@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] =='POST') {
 		if ($user_id) {
 			session_regenerate_id();
 			$_SESSION['user_id'] = $user_id;
-			header('Location: main-pg.php' );
+			header('Location: my-list.php' );
 			exit;
 			//redirect back to the page they came from
 		} 
@@ -90,8 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] =='POST') {
 			</div>
 		</div>
 
-	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
-	<!--<script src="js/my-list.js"></script>-->
+	<?php include 'includes/wrapper-bottom.php'; ?>
 	</div>
 </body>
 </html>
