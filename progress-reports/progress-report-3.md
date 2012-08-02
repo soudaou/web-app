@@ -19,11 +19,7 @@
 
 #### 5. Q- What parts of the application, in the past week, were enjoyable?
 
-<<<<<<< HEAD
 	A- Getting the the checkboxes to get inserted to the database ,then viewing the selected exercises in another page.
-=======
-	A- Getting the the checkboxes to get inserted to the database ,then viewing the list in another page.
->>>>>>> origin/master
 
 #### 6. Q- What parts of the application, in the past week, were frustrating?
 
