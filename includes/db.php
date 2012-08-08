@@ -5,10 +5,13 @@
 
 // Our username and password are kept in Environment Variables, in .htaccess
 // This is for security
-$user = getenv('DB_USER');		// The MySQL username
-$pass = getenv('DB_PASS');		// The MySQL password
+$user = getenv('MYSQL_USERNAME');		// The MySQL username
+$pass = getenv('MYSQL_PASSWORD');		// The MySQL password
+$host = getenv('MYSQL_DB_HOST');		// The MySQL db_host
+$dbname = getenv('MYSQL_DB_NAME');		// The MYSQL db_name
+
 //no spaces here at all!!
-$data_source = getenv('DATA_SOURCE');
+$data_source = sprintf('mysql:host=%s;dbname=%s',$host, $dbname);
 
 // PDO: PHP Data Objects
 // Allows us to connect to many different kinds of database
