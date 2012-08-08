@@ -1,8 +1,9 @@
-# My XERCISE planner
+# Web-App
 
 ## Author, email
 
 Souad Daou
+
 souaddaou@gmail.com
 
 
@@ -24,11 +25,11 @@ August 8th, 2012
 
 ## How to install this application
 
-1- You need a  local server
+1- You will first need a local server
 
-2- Go to my web-app repository
+2- Then go to my web-app repository, where all my files and folders will be
 
-3- 
+3- Then you need to fork direction 
 
 4- 
 
