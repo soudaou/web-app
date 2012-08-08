@@ -1,4 +1,4 @@
-# Web-App
+# My XERCISE planner
 
 ## Author, email
 
