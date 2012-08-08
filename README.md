@@ -24,12 +24,17 @@ August 8th, 2012
 
 ## How to install this application
 
-1- Go to phpfog.com
-2- 
+1- You need a  local server
+
+2- Go to my web-app repository
+
+3- 
+
+4- 
 
 ## License, Copyright
 
-Type of license: BSD3
+This data is licensed under The BSD 3-Clause License: http://opensource.org/licenses/BSD-3-Clause
 
 
 Copyright (c) 2012, Souad Daou All rights reserved.
