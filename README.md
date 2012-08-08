@@ -1,17 +1,19 @@
 # My XERCISE planner
 
-## Author
+## Author, email
 
 Souad Daou
 souaddaou@gmail.com
+
 
 ## Date created
 
 August 8th, 2012
 
+
 ## How to use the application
 
-1- Need to sign up
+1- Need to sign up to create an account
 
 2- Start creating your list
 
@@ -28,16 +30,13 @@ August 8th, 2012
 ## License, Copyright
 
 Type of license: BSD3
-Copyright: Copyright (c) 2012, Souad Daou All rights reserved.
+
+Copyright (c) 2012, Souad Daou All rights reserved.
+
 
 ## Versions, Dependencies, compatability
 
 Version 1.0.0
-
-
-
-
-
 
 
 ## Link to web application
