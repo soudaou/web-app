@@ -3,7 +3,7 @@
 
 #### 1. Q- What features have you accomplished in the past week?
 
-	A-I was able in the past week to all my css working.
+	A-I was able in the past week to finish my css.
 
 #### 2. Q- Did you achieve the previous week's goals?
 
@@ -11,7 +11,7 @@
 
 #### 3. Q- What are your goals for this week?
 
-	A- My goals for this week is to add the readme.md file, license.txt and changelog and last Coc Block for the files.
+	A- My goals for this week is to add the readme.md file, license.txt and changelog and last Doc Block for the php files.
 
 #### 4. Q- What concepts or techniques did you learn?
 
@@ -23,8 +23,8 @@
 
 #### 6. Q- What parts of the application, in the past week, were frustrating?
 
-	A- Didnt have anything frustrating inthe past week.
+	A- Didnt have anything frustrating in the past week.
 
 #### 7. Q- Did you have to radically alter something you'd finished previously?
 
-	A- There was not a big radical alteration, but I changed the css to be resposive.
+	A- There was no radical alteration, but I changed the css to be resposive.
