@@ -25,13 +25,8 @@ August 8th, 2012
 
 ## How to install this application
 
-1- You will first need a local server
+All you need is access to a browser or mobile device.
 
-2- Then go to my web-app repository, where all my files and folders will be
-
-3- Then you need to fork direction 
-
-4- 
 
 ## License, Copyright
 
