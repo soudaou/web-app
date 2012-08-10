@@ -1,4 +1,16 @@
 <?php
+
+/**
+ * Small description of this file:
+ * This is the page were all the validation happens for the user
+  * 
+  * @author Souad Daou <souaddaou@gmail.com>
+  * @copyright 2012 Souad Daou
+  * @License BSD-3-Clause <http://opensource.org/licenses/BSD-3-Clause>
+  * @version 1.0.0
+  * @xercise planner
+*/
+
 // we can just add session_start at the top cause you need it from the beginning
 session_start();
 

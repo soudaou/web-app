@@ -1,4 +1,18 @@
-<!DOCTYPE HTML>
+<?php
+
+/**
+ * Small description of this file:
+ * This is the wrapper-top that has the logo and the navigation
+  * 
+  * @author Souad Daou <souaddaou@gmail.com>
+  * @copyright 2012 Souad Daou
+  * @License BSD-3-Clause <http://opensource.org/licenses/BSD-3-Clause>
+  * @version 1.0.0
+  * @xercise planner
+*/
+
+
+?><!DOCTYPE HTML>
 <html>
 <head>
 <meta charset="utf-8">

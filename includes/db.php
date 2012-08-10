@@ -1,5 +1,17 @@
 <?php
 
+/**
+ * Small description of this file:
+ * This is the page called db where all the connections happen to the MYSQL database
+  * 
+  * @author Souad Daou <souaddaou@gmail.com>
+  * @copyright 2012 Souad Daou
+  * @License BSD-3-Clause <http://opensource.org/licenses/BSD-3-Clause>
+  * @version 1.0.0
+  * @xercise planner
+*/
+
+
 // Opens a connection to the MySQL database
 // Shared between all the PHP file in our application
 
